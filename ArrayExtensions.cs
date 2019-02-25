@@ -10,9 +10,13 @@ namespace PadawansTask11
             {
                 throw new ArgumentNullException();
             }
-            if (array.Length == 0 || accuracy > 1 || accuracy < 0)
+            if (array.Length == 0)
             {
                 throw new ArgumentException();
+            }
+            if (accuracy > 1 || accuracy < 0)
+            {
+                throw new ArgumentOutOfRangeException();
             }
             
             for (int index = 1; index < array.Length; index++)
